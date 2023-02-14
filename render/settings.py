@@ -85,7 +85,9 @@ WSGI_APPLICATION = "render.wsgi.application"
 
 DATABASES = {
     "default": dj_database_url.config(
-        "", default="postgresql://postgres:postgres@localhost:5432/render", conn_max_age=600
+        "postgres://render_qknp_user:1sQeYQPk4EJNjQjcQs8txVLwc2sINzbl@dpg-cfls3dhgp3ju5h60p7mg-a/render_qknp",
+        default="postgresql://postgres:postgres@localhost:5432/render",
+        conn_max_age=600,
     )
 }
 
