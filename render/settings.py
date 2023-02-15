@@ -83,22 +83,22 @@ WSGI_APPLICATION = "render.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     "default": dj_database_url.config(
-#         os.environ.get("DATABASE_URL", default="postgresql://postgres:postgres@localhost:5432/render"),
-#     )
-# }
-
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "render_qknp",
-        "USER": "render_qknp_user",
-        "PASSWORD": "1sQeYQPk4EJNjQjcQs8txVLwc2sINzbl",
-        "HOST": "dpg-cfls3dhgp3ju5h60p7mg-a",
-        "PORT": "5432",
-    }
+    "default": dj_database_url.config(
+        os.environ.get("DATABASE_URL"),
+    ),
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "render_qknp",
+#         "USER": "render_qknp_user",
+#         "PASSWORD": "1sQeYQPk4EJNjQjcQs8txVLwc2sINzbl",
+#         "HOST": "dpg-cfls3dhgp3ju5h60p7mg-a",
+#         "PORT": "5432",
+#     }
+# }
 
 
 # Password validation
